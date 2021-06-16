@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
 body {
     display: flex;
     justify-content: center;
@@ -9,67 +10,8 @@ body {
     font-size: 1.1rem;
     font-family: 'Quicksand', sans-serif;
     height: 100%;
+    overflow: hidden;
 }
-
-
-/* nav bar start */
-
-nav {
-    width: 100vw;
-    background-color: #999;
-    position: absolute;
-    top: 2%;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-li {
-    list-style-type: none;
-    margin: 0 2vw;
-    font-size: 3vh;
-}
-
-a {
-    user-select: none;
-    text-decoration: none;
-    color: black;
-    padding: 2vw;
-    font-family: monospace;
-    float: left;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-a:hover {
-    background-color: #aaa;
-}
-
-
-/* end nav bar */
-
-
-/* footer :start */
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
-    background-color: #999;
-}
-
-
-/* footer end */
 
 @keyframes bg-ani {
     0% {
@@ -80,93 +22,406 @@ a:hover {
     }
 }
 
+
+/* nav bar start */
+
+nav {
+    width: 100vw;
+    background-color: #333;
+    position: absolute;
+    display: flex;
+    top: 2%;
+    color: #fff;
+}
+
+#logo {
+    margin-left: 40px;
+    font-size: 2em;
+    font-family: Candal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: left;
+}
+
+li {
+    list-style-type: none;
+    margin: 0 2vw;
+    font-size: 3vh;
+}
+
+.nav-link {
+    user-select: none;
+    text-decoration: none;
+    color: #fff;
+    padding: 2vw;
+    font-family: monospace;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-link:hover {
+    background-color: #fff;
+    color: #333;
+    transition: color 1s;
+    transition: background-color 1s;
+}
+
+.current-tab {
+    background-color: #ccc5;
+    color: #fff;
+}
+
+
+/* modal box */
+
+
+/* btn start */
+
+.text-center {
+    margin: 10px;
+    left: 0%;
+    right: 0%;
+}
+
+.btn {
+    user-select: none;
+    background: #333;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Candal;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    box-shadow: 0 2px 20px black;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+/* btn end */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 12% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 26vh;
+    border-radius: 3px;
+    /* top: 500px; */
+}
+
+.game-over {
+    display: block;
+    font-weight: bold;
+    font-family: Candal;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.reset-btn-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+
+/* Modal Content/Box */
+
+
+/* table fonts */
+
+table {
+    font-family: Candal;
+}
+
+
+/* Score Card */
+
+#score-card {
+    font-size: 140%;
+    font-weight: bold;
+    color: #333;
+}
+
+.score-block {
+    height: 50px;
+    width: 210px;
+    left: 0%;
+}
+
+.left-block {
+    justify-content: left;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: visible;
+}
+
+.right-block {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: visible;
+}
+
+#best {
+    overflow-x: visible;
+}
+
+#score {
+    justify-self: left;
+    overflow-x: visible;
+}
+
+#plusx {
+    display: flex;
+    justify-content: right;
+    /* margin-right: -20; */
+}
+
+#plus {
+    color: rgba(141, 141, 141, .5);
+    font-size: 1.6em;
+    font-weight: bold;
+    z-index: 1;
+    margin-left: -70px;
+    position: absolute;
+    animation: score-plus-animation 600ms ease-in;
+    opacity: 0;
+}
+
+@keyframes score-plus-animation {
+    0% {
+        scale: 0%;
+    }
+    50% {
+        opacity: 1;
+        scale: 100%;
+    }
+    100% {
+        margin-top: -70px;
+        scale: 0%;
+    }
+}
+
 #boardx {
-    margin: 100px;
-    background-color: rgba(255, 255, 255, .7);
+    margin-top: 100px;
+    background-color: #fff;
     padding: 10px;
     box-shadow: 0 2px 4px 0 gray, 0 4px 16px 0 grey;
 }
 
-.blockx {
-    user-select: none;
-    width: 130px;
-    height: 130px;
-    background-color: white;
-    color: #333;
-    margin: 10px;
-    display: table-cell;
-    /* border-radius: 30%; */
-    font-size: 3em;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+/* row */
 
 .rowx {
     display: flex;
 }
 
+
+/* for each cell of grid */
+
+.blockx {
+    user-select: none;
+    width: 100px;
+    height: 100px;
+    color: #555;
+    margin: 10px;
+    display: table-cell;
+    /* border-radius: 30%; */
+    font-family: monospace;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
 .c0 {
-    background-color: #bbb;
-    transition: background-color 0.5s;
-    /* transform: translateX(100%); */
+    background-color: #eee8;
+    /* transition: background-color 0.5s; */
 }
 
 .cur {
-    animation: boom 10ms ease-in-out;
+    animation: boom 300ms ease-out;
 }
 
 @keyframes boom {
     0% {
         background-color: #bbb;
-        color: goldenrod;
+        color: rgb(29, 28, 26);
+        scale: 0;
     }
-    100% {}
+    80% {
+        scale: 130%;
+    }
+    100% {
+        scale: 100%;
+    }
 }
 
 .c2 {
-    background-color: #33ffbd;
+    background-color: #65ffce55;
 }
 
 .c4 {
-    background-color: #33ff57;
+    background-color: #02ffafb6;
 }
 
 .c8 {
-    background-color: #75ff33;
+    background-color: #00ff6a;
+    /* color: #fff; */
 }
 
 .c16 {
-    background-color: #dbff33;
+    background-color: #d5fa30ee;
 }
 
 .c32 {
-    background-color: #ffbd33;
+    background-color: #ffd900ca;
 }
 
 .c64 {
-    background-color: #ff5733;
+    background-color: #ffa500;
+    color: #fff;
 }
 
 .c128 {
-    background-color: #ff33cd;
+    background-color: #f1533eda;
+    color: #fff;
 }
 
 .c256 {
-    background-color: #cb33ff;
+    background-color: #cc33ffe8;
+    color: #fff;
 }
 
 .c512 {
-    background-color: #6533ff;
+    background-color: #6633ffec;
+    color: #fff;
 }
 
 .c1024 {
-    background-color: #3367ff;
+    background-color: #3366ffec;
     font-size: 2em;
+    color: #fff;
 }
 
 .c2048 {
-    background-color: #4c33ff;
+    background-color: #000dca;
     font-size: 2em;
+    color: #fff;
+}
+
+
+/* footer :start */
+
+.footer {
+    /* align-items: center;
+    justify-content: center; */
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    /* height: 100px; */
+    background-color: #333;
+    color: #fff;
+    font-size: small;
+    /* opacity: .9; */
+}
+
+.footer>div {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    user-select: none;
+}
+
+.icon {
+    user-select: none;
+    justify-self: center;
+    vertical-align: middle;
+    height: 20px;
+    width: auto;
+}
+
+
+/* footer end */
+
+
+/* about page */
+
+#about-game,
+#how-to-play {
+    position: absolute;
+    top: 20%;
+    background-color: #fff;
+    height: 40vh;
+    left: 20%;
+    width: 50vw;
+    padding: 40px;
+}
+
+#about-game,
+#how-to-play>p {
+    padding: 10;
+    justify-content: center;
+    text-justify: newspaper;
+}
+
+.lets-play {
+    /* position: relative; */
+    bottom: 10%;
+}
+
+.heading {
+    position: absolute;
+    left: 20%;
+    top: 10%;
 }

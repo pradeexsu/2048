@@ -5,30 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2048 Game</title>
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
+    <title>2048 by pradeep</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icons/2048.jpg" type="image/x-icon">
 </head>
 
 <body>
     <nav>
+        <div id="logo">
+            2048
+        </div>
         <ul>
             <li>
-                <a href="https://sutharp777.github.io"> About Me </a>
+                <a class="nav-link" target="_blank" href="https://github.com/sutharp777/2048"> Code </a>
             </li>
             <li>
-                <a href="https://github.com/sutharp777"> Github </a>
+                <a class="nav-link" href="./how_to_play.html">How to play</a>
             </li>
             <li>
-                <a href="#github"> How  to play </a>
+                <a class="nav-link" href="/about.html">About</a>
             </li>
-            <li>
-                <a href="#linkedin"> Rules of Game </a>
-            </li>
+
         </ul>
     </nav>
     <div>
-
         <table id="boardx">
+            <tr class="rowx" id="score-card">
+                <td class="blcokx score-block left-block" colspan="2" rowspan="2">
+
+                    Score: &nbsp; <span id="score">0</span>
+                    <span id="plusx"></span>
+
+                </td>
+                <td class="blcokx score-block right-block" colspan="2" rowspan="2">
+                    Best: &nbsp; <span id="best">0</span>
+                </td>
+
+                </td>
+            </tr>
             <tr class="rowx">
                 <td class="blockx c0">&nbsp;</td>
                 <td class="blockx c0">&nbsp;</td>
@@ -54,11 +69,43 @@
                 <td class="blockx c0">&nbsp;</td>
             </tr>
         </table>
+        <div class="reset-btn-wraper">
 
+            <div class="text-center ">
+                <div class="btn reset">Reset</div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal-content text-center">
+                <div class="game-over">Game Over</div>
+                <div class="btn restart">Restart Game</div>
+            </div>
+        </div>
     </div>
-    <div class="footer">
-        <span>this game is created by pradeep</span>
-    </div>
+
+    <footer class="footer">
+        <div>
+            <a href="https://www.linkedin.com/in/pradeep-swe" target="_blank"><img src="./icons/linkedin.png" alt="linkedin" class="social-icon"></a>
+            <a href="https://github.com/sutharp777" target="_blank"><img src="./icons/github.png" alt="github" class="social-icon"></a>
+            <a href="https://stackoverflow.com/users/12537691/sutharp777?tab=profile" target="_blank"><img src="./icons/stack.png" alt="stackoverflow" class="social-icon"></a>
+            <a href="https://sutharp777.github.io" target="_blank"><img src="./icons/website.png" alt="website" class="social-icon"></a>
+        </div>
+
+        <div>2048 Game built with ❤️ using &nbsp;
+            <img class="icon" src="./icons/css3.png" alt="css icon"> &nbsp;
+            <img class="icon" src="./icons/html5.png" alt="html icon"> &nbsp;
+            <img class="icon" src="./icons/js.png" alt="js icon"> &nbsp;
+            <img class="icon" src="./icons/vscode.png" alt="vscode icon"> &nbsp; and hosted on &nbsp;
+            <img class="icon" src="./icons/github.png" alt="github icon">
+        </div>
+
+        <div>
+
+            &copy; 2021 by Pradeep Suthar
+
+        </div>
+    </footer>
     <script src="./2048.js"></script>
 </body>
 
