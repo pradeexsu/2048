@@ -298,7 +298,7 @@ table {
 }
 
 .c2 {
-    background-color: #65ffce55;
+    background-color: #8dffdbad;
 }
 
 .c4 {
@@ -308,38 +308,46 @@ table {
 .c8 {
     background-color: #00ff6a;
     /* color: #fff; */
+    box-shadow: 0 0 2px #00ff6a, 0 0 4px rgb(187, 255, 170);
 }
 
 .c16 {
     background-color: #d5fa30ee;
+    box-shadow: 0 0 4px #d5fa30ee, 0 0 8px #d5fa30ee;
 }
 
 .c32 {
-    background-color: #ffd900ca;
+    background-color: #ffd000bd;
+    box-shadow: 0 0 4px #ffd000bd, 0 0 8px #ffd000bd;
 }
 
 .c64 {
-    background-color: #ffa500;
+    background-color: #ff5e00;
+    box-shadow: 0 0 4px #ff5e00, 0 0 8px #ff5e00;
     color: #fff;
 }
 
 .c128 {
-    background-color: #f1533eda;
+    background-color: #ff2a0eda;
+    box-shadow: 0 0 5px #ff2a0eda, 0 0 10px #ff2a0eda;
     color: #fff;
 }
 
 .c256 {
     background-color: #cc33ffe8;
+    box-shadow: 0 0 6px #cc33ffe8, 0 0 12px #cc33ffe8;
     color: #fff;
 }
 
 .c512 {
     background-color: #6633ffec;
+    box-shadow: 0 0 6px #6633ffec, 0 0 15px #6633ffec;
     color: #fff;
 }
 
 .c1024 {
     background-color: #3366ffec;
+    box-shadow: 0 0 10px #3366ffec, 0 0 15px #3366ffec;
     font-size: 2em;
     color: #fff;
 }
@@ -347,6 +355,7 @@ table {
 .c2048 {
     background-color: #000dca;
     font-size: 2em;
+    box-shadow: 0 0 10px #000dca, 0 0 20px #000dca;
     color: #fff;
 }
 
