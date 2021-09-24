@@ -173,14 +173,13 @@ table {
 /* Score Card */
 
 #score-card {
-    font-size: 140%;
     font-weight: bold;
     color: #333;
 }
 
 .score-block {
-    height: 50px;
-    width: 210px;
+    height: 40px;
+    width: 140px;
     left: 0%;
 }
 
@@ -242,7 +241,7 @@ table {
 }
 
 #boardx {
-    margin-top: 100px;
+    margin-top: 80px;
     background-color: #fff;
     padding: 10px;
     box-shadow: 0 2px 4px 0 gray, 0 4px 16px 0 grey;
@@ -260,14 +259,14 @@ table {
 
 .blockx {
     user-select: none;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     color: #555;
     margin: 10px;
     display: table-cell;
     /* border-radius: 30%; */
     font-family: monospace;
-    font-size: 2.5em;
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
