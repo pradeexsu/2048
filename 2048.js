@@ -59,7 +59,7 @@ function getRandomPos(posList) {
 }
 
 function getRandomOf2OR4() {
-    return Math.random() > .5 ? 2 : 4
+    return Math.random() > .7 ? 2 : 4
 }
 
 function tiltLeft(board) {
